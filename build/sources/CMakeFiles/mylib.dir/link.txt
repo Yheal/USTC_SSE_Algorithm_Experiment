@@ -1,0 +1,2 @@
+D:/mingw/MinGW/bin/ar.exe qc /lib/libmylib.a  CMakeFiles/mylib.dir/BinarySearchTree.cpp.obj CMakeFiles/mylib.dir/DivideAndConquerSolution.cpp.obj CMakeFiles/mylib.dir/KBackpackQuestions.cpp.obj CMakeFiles/mylib.dir/RedBlackTree.cpp.obj CMakeFiles/mylib.dir/SortAlgorithmSolution.cpp.obj CMakeFiles/mylib.dir/TaskSchedulingSolution.cpp.obj
+D:/mingw/MinGW/bin/ranlib.exe /lib/libmylib.a

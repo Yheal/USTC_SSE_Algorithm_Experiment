@@ -1,0 +1,37 @@
+[
+{
+  "directory": "D:/Home/05_USTC_SSE/algorithm_learn/Code/build",
+  "command": "D:/mingw/MinGW/bin/g++.exe   @CMakeFiles/main.dir/includes_CXX.rsp  -g -g   -std=gnu++11 -o CMakeFiles/main.dir/main.cpp.obj -c D:/Home/05_USTC_SSE/algorithm_learn/Code/main.cpp",
+  "file": "D:/Home/05_USTC_SSE/algorithm_learn/Code/main.cpp"
+},
+{
+  "directory": "D:/Home/05_USTC_SSE/algorithm_learn/Code/build/sources",
+  "command": "D:/mingw/MinGW/bin/g++.exe   @CMakeFiles/mylib.dir/includes_CXX.rsp  -g -g   -std=gnu++11 -o CMakeFiles/mylib.dir/BinarySearchTree.cpp.obj -c D:/Home/05_USTC_SSE/algorithm_learn/Code/sources/BinarySearchTree.cpp",
+  "file": "D:/Home/05_USTC_SSE/algorithm_learn/Code/sources/BinarySearchTree.cpp"
+},
+{
+  "directory": "D:/Home/05_USTC_SSE/algorithm_learn/Code/build/sources",
+  "command": "D:/mingw/MinGW/bin/g++.exe   @CMakeFiles/mylib.dir/includes_CXX.rsp  -g -g   -std=gnu++11 -o CMakeFiles/mylib.dir/DivideAndConquerSolution.cpp.obj -c D:/Home/05_USTC_SSE/algorithm_learn/Code/sources/DivideAndConquerSolution.cpp",
+  "file": "D:/Home/05_USTC_SSE/algorithm_learn/Code/sources/DivideAndConquerSolution.cpp"
+},
+{
+  "directory": "D:/Home/05_USTC_SSE/algorithm_learn/Code/build/sources",
+  "command": "D:/mingw/MinGW/bin/g++.exe   @CMakeFiles/mylib.dir/includes_CXX.rsp  -g -g   -std=gnu++11 -o CMakeFiles/mylib.dir/KBackpackQuestions.cpp.obj -c D:/Home/05_USTC_SSE/algorithm_learn/Code/sources/KBackpackQuestions.cpp",
+  "file": "D:/Home/05_USTC_SSE/algorithm_learn/Code/sources/KBackpackQuestions.cpp"
+},
+{
+  "directory": "D:/Home/05_USTC_SSE/algorithm_learn/Code/build/sources",
+  "command": "D:/mingw/MinGW/bin/g++.exe   @CMakeFiles/mylib.dir/includes_CXX.rsp  -g -g   -std=gnu++11 -o CMakeFiles/mylib.dir/RedBlackTree.cpp.obj -c D:/Home/05_USTC_SSE/algorithm_learn/Code/sources/RedBlackTree.cpp",
+  "file": "D:/Home/05_USTC_SSE/algorithm_learn/Code/sources/RedBlackTree.cpp"
+},
+{
+  "directory": "D:/Home/05_USTC_SSE/algorithm_learn/Code/build/sources",
+  "command": "D:/mingw/MinGW/bin/g++.exe   @CMakeFiles/mylib.dir/includes_CXX.rsp  -g -g   -std=gnu++11 -o CMakeFiles/mylib.dir/SortAlgorithmSolution.cpp.obj -c D:/Home/05_USTC_SSE/algorithm_learn/Code/sources/SortAlgorithmSolution.cpp",
+  "file": "D:/Home/05_USTC_SSE/algorithm_learn/Code/sources/SortAlgorithmSolution.cpp"
+},
+{
+  "directory": "D:/Home/05_USTC_SSE/algorithm_learn/Code/build/sources",
+  "command": "D:/mingw/MinGW/bin/g++.exe   @CMakeFiles/mylib.dir/includes_CXX.rsp  -g -g   -std=gnu++11 -o CMakeFiles/mylib.dir/TaskSchedulingSolution.cpp.obj -c D:/Home/05_USTC_SSE/algorithm_learn/Code/sources/TaskSchedulingSolution.cpp",
+  "file": "D:/Home/05_USTC_SSE/algorithm_learn/Code/sources/TaskSchedulingSolution.cpp"
+}
+]
