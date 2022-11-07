@@ -1,5 +1,6 @@
 #include "TaskSchedulingSolution.h"
 
+#include <iostream>
 #include <vector>
 #include <algorithm>
 
@@ -39,20 +40,19 @@ int TaskSchedulingSolution::taskSchedule(int * d, int * w, int *scheduling, int 
 
 	sort(tasks.begin(), tasks.end());
 
-	for (TaskDesc &td : tasks) {
-	
+	for (TaskDesc &td : tasks) 
+	{
 		int i = 0;
 		bool ok = true;
 
 		for(;i < B.size();i++)
-			if (td.declineTime < tasks[B[i]].declineTime)
+			if (td.declineTime < d[B[i]])
 				break;
 		B.insert(i + B.begin(), td.tag);
-		
-		// 检查是否满足条件
+		// 检查是否满足条件, 按照顺序对它们调度，进度下一次调度完成的时间
 		for (int j = 0; j < B.size(); j++) 
 		{
-			if (tasks[B[j]].declineTime < (j + 1))
+			if (d[B[j]] < (j+1))
 			{
 				ok = false;
 				break;
@@ -63,8 +63,10 @@ int TaskSchedulingSolution::taskSchedule(int * d, int * w, int *scheduling, int 
 			B.erase(i + B.begin());
 	}
 
-	for (int i : B) {
-		preTaskTotalWeight += tasks[i].weight;
+	
+	for (int i : B) 
+	{
+		preTaskTotalWeight += w[i];
 		mask[i] = 1;
 		scheduling[p++] = i;
 	}

@@ -7,21 +7,51 @@
 #include "BinarySearchTree.h"
 #include "RedBlackTree.h"
 
-int main()
+void divideAndConquerTest()
 {
-	/*
-	DivideAndConquerSolution solution;
-	vector<int> test;
-	test.push_back(-2);
-	test.push_back(-2);
-	test.push_back(-2);
-	test.push_back(-2);
-	test.push_back(-2);
-	test.push_back(-2);
-	std::cout << "result: " << solution.MaximumSubarray(test) << endl;
-	*/
+	std::cout<<"------------------------------ Divide And Conquer --------------------------"<<std::endl;
 	
-	/*
+	DivideAndConquerSolution solution;
+	vector<int> test1;
+	test1.push_back(-2);
+	test1.push_back(1);
+	test1.push_back(-3);
+	test1.push_back(4);
+	test1.push_back(-1);
+	test1.push_back(2);
+	test1.push_back(1);
+	test1.push_back(-5);
+	test1.push_back(4);
+
+	std::cout << "Maximum Subarray: " << solution.MaximumSubarray(test1) << endl;
+
+	vector<int> test2;
+	test2.push_back(1);
+	test2.push_back(2);
+	test2.push_back(3);
+	test2.push_back(4);
+	test2.push_back(8);
+
+	vector<int> test3;
+	test3.push_back(2);
+	test3.push_back(4);
+	test3.push_back(6);
+	test3.push_back(8);
+	test3.push_back(10);
+
+
+	std::cout << "Median Element: " << solution.findMedianSortedArrays(test2, test3) << endl;
+
+	std::cout<<"------------------------------- Divide And Conquer--------------------------"<<std::endl;
+
+
+} 
+
+void sortAlgoritmsTest()
+{
+	std::cout<<"------------------------------ Sort Algorithm --------------------------"<<std::endl;
+	SortAlgorithmSolution sortAlgorithmSolution;
+
 	vector<int> test;
 	test.push_back(-2);
 	test.push_back(1);
@@ -32,10 +62,13 @@ int main()
 	test.push_back(1);
 	test.push_back(-5);
 	test.push_back(4);
-	*/
+	sortAlgorithmSolution.quickSort(test);
+	cout<<"Quick Sort: ";
+	for (int i : test)
+		cout << i << " ";
+	cout << endl;
 
-	/*
-	vector<int> test;
+	test.clear();
 	test.push_back(95);
 	test.push_back(94);
 	test.push_back(90);
@@ -46,39 +79,18 @@ int main()
 	test.push_back(93);
 	test.push_back(91);
 	test.push_back(92);
-	SortAlgorithmSolution sortAlgorithmSolution;
 	sortAlgorithmSolution.CountSort(test);
+	cout<<"Count Sort: ";
 	for (int i : test)
 		cout << i << " ";
 	cout << endl;
-	*/
+	std::cout<<"------------------------------ Sort Algorithm --------------------------"<<std::endl;
 
-	KBackpackQuestions kback;
-	
-	int c = 10, n = 5;
-	int weights[] = { 2, 2, 6, 5 ,4 };
-	int values[] = { 6, 3, 5, 4, 6 };
-	int puts[5];
+}
 
-	cout<<"Max Value: "<<kback.BackpackQuestion(c, weights, values, puts, n, GREED)<<endl;
-	for (int i = 0;i < n;i++) 
-	{
-		if(puts[i])
-			cout << "The " << i + 1 << " thing is selected" << endl;
-		else
-			cout << "The " << i + 1 << " thing is not selected" << endl;
-	}
-
-	TaskSchedulingSolution tss;
-	int d[7] = { 4, 2, 4 ,3, 1, 4, 6 };
-	int w[7] = { 70, 60, 50, 40, 30, 20, 10 };
-	int result[7];
-	int k = 7;
-	cout << "\nThe penalty value is " << tss.taskSchedule(d, w, result, k) << endl;
-	cout << "The scheduling sequence is ";
-	for (int i = 0;i < k;i++) 
-		cout << " a" << result[i] + 1;
-	cout << '\n'<< endl;
+void binarySearchTreeTest()
+{
+	std::cout<<"------------------------------ Binary Search Tree --------------------------"<<std::endl;
 
 	BinarySearchTree tree;
 	tree.InsertNode(5);
@@ -108,12 +120,15 @@ int main()
 	r_r->left = r_r_l;
 	r_r->right = r_r_r;
 	if (tree.IsBinarySearchTree(root))
-		cout << "\nbinary search tree!" << endl;
+		cout << "\nexample is binary search tree!" << endl;
 	else
-		cout << "\nnot binary search tree!" << endl;
+		cout << "\nexample is not binary search tree!" << endl;
+	std::cout<<"------------------------------ Binary Search Tree --------------------------"<<std::endl;
+}
 
-
-	cout<<"\nRed Black Test:"<<endl;
+void redBlackTreeTest()
+{
+	std::cout<<"------------------------------Red Black Tree --------------------------"<<std::endl;
 	RBTree rbTree;
 	
 	rbTree.insertNode(1);
@@ -127,25 +142,88 @@ int main()
 	rbTree.insertNode(12);
 	rbTree.insertNode(13);
 	rbTree.insertNode(14);
-	
+	rbTree.checkRB();
+	rbTree.printRB();
+
 	rbTree.deleteNode(14);
 	rbTree.deleteNode(9);
 	rbTree.deleteNode(5);
 	rbTree.deleteNode(8);
-
-	
-	/*
-	rbTree.insertNode(41);
-	rbTree.insertNode(38);
-	rbTree.insertNode(31);
-	rbTree.insertNode(12);
-	rbTree.insertNode(19);
-	rbTree.insertNode(8);
-
-	rbTree.deleteNode(41);
-	rbTree.deleteNode(19);
-	*/
 	rbTree.checkRB();
 	rbTree.printRB();
+	
+	std::cout<<"------------------------------Red Black Tree --------------------------"<<std::endl;
+
+}
+
+void taskSchedulingTest()
+{
+	std::cout<<"------------------------------Task Scheduling --------------------------"<<std::endl;
+	TaskSchedulingSolution tss;
+	int d[7] = { 4, 2, 4 ,3, 1, 4, 6 };
+	int w[7] = { 70, 60, 50, 40, 30, 20, 10 };
+	int result[7];
+	int k = 7;
+	cout << "Question 1:\n    The penalty value is " << tss.taskSchedule(d, w, result, k) << endl;
+	cout << "    The scheduling sequence is ";
+	for (int i = 0;i < k;i++) 
+		cout << " a" << result[i] + 1;
+	cout << '\n'<< endl;
+
+	for(int i = 0;i < k;i++)
+		w[i] = 80 - w[i];
+
+	cout << "Question 2:\n    The penalty value is " << tss.taskSchedule(d, w, result, k) << endl;
+	cout << "    The scheduling sequence is ";
+	for (int i = 0;i < k;i++) 
+		cout << " a" << result[i] + 1;
+	cout << '\n'<< endl;
+	std::cout<<"------------------------------Task Scheduling --------------------------"<<std::endl;
+
+}
+
+void knapsackTest()
+{
+	std::cout<<"------------------------------0-1 Knapsack--------------------------"<<std::endl;
+
+	KBackpackQuestions kback;
+	
+	int c = 10, n = 5;
+	int weights[] = { 2, 2, 6, 5 ,4 };
+	int values[] = { 6, 3, 5, 4, 6 };
+	int puts[5];
+
+	cout<<"Greedy method:\n    Max Value: "<<kback.BackpackQuestion(c, weights, values, puts, n, GREED)<<endl;
+	for (int i = 0;i < n;i++) 
+	{
+		if(puts[i])
+			cout << "    The " << i + 1 << " thing is selected" << endl;
+		else
+			cout << "    The " << i + 1 << " thing is not selected" << endl;
+	}
+
+	cout<<"Dynamic Programming method:\n    Max Value: "<<kback.BackpackQuestion(c, weights, values, puts, n)<<endl;
+	for (int i = 0;i < n;i++) 
+	{
+		if(puts[i])
+			cout << "    The " << i + 1 << " thing is selected" << endl;
+		else
+			cout << "    The " << i + 1 << " thing is not selected" << endl;
+	}
+
+	std::cout<<"------------------------------0-1 Knapsack--------------------------"<<std::endl;
+
+}
+
+
+int main()
+{
+	
+	divideAndConquerTest();
+	sortAlgoritmsTest();
+	binarySearchTreeTest();
+	redBlackTreeTest();
+	taskSchedulingTest();
+	knapsackTest();
 	return 0;
 }

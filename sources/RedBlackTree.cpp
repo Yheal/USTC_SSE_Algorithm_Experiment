@@ -90,6 +90,13 @@ bool RBTree::checkRB()
 
 void RBTree::printRB() { printRB(root);}
 
+void RBTree::clearAll()
+{
+	clearNode(root);
+	root = nil;
+	root->parent = nil;
+}
+
 void RBTree::leftRotate(RBNode * x)
 {
 	RBNode *y = (x == nullptr ? nullptr : x->right);
@@ -323,9 +330,9 @@ void RBTree::deleteNode(RBNode * z)
 
 	}
 
-	if (deleted_color == BLACK) {
+	if (deleted_color == BLACK)
 		deleteFixUp(colorMixedNode);
-	}
+	delete z;
 }
 
 
@@ -410,6 +417,14 @@ void RBTree::deleteFixUp(RBNode * blackMixedNode)
 	blackMixedNode->color = BLACK;
 }
 
+void RBTree::clearNode(RBNode *x) 
+{
+	if(x == nil)
+		return;
+	clearNode(x->left);
+	clearNode(x->right);
+	delete x;
+}
 
 // 返回x为结点的黑高（包括x）
 int RBTree::checkFeatures4And5(RBNode * x)

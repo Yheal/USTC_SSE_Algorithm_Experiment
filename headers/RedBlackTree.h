@@ -32,6 +32,7 @@ public:
 	RBNode *MinmuimNode(RBNode * r);
 	bool checkRB();
 	void printRB();
+	void clearAll();
 
 private:
 	void leftRotate(RBNode *x);
@@ -43,6 +44,7 @@ private:
 	void RBTransplant(RBNode *u, RBNode *v);
 	void deleteNode(RBNode *x);
 	void deleteFixUp(RBNode *x);
+	void clearNode(RBNode *x); 
 	int checkFeatures4And5(RBNode *x);
 
 };
